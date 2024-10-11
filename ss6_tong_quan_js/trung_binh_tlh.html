@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điểm trung bình</title>
+</head>
+<body>
+<input id="toan" placeholder="Nhập điểm Toán" type="number" ><br>
+<input id="ly" placeholder="Nhập điểm Lý" type="number"><br>
+<input id="hoa" placeholder="Nhập điểm Hóa"type="number" ><br>
+<button onclick="dulieu()">Điểm trung bình</button>
+<script>
+    function dulieu() {
+        let a = parseFloat(document.getElementById("toan").value);
+        let b = parseFloat(document.getElementById("ly").value);
+        let c = parseFloat(document.getElementById("hoa").value);
+        let tong = (a + b + c) / 3;
+        alert("Điểm trung bình của bạn là: " + tong);
+    }
+</script>
+</body>
+</html>
