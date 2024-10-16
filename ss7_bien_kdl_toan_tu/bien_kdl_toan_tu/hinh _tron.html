@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chu vi diện tích hình tròn</title>
+</head>
+<body>
+<h3>Tính chu vi diện tích hình tròn</h3>
+<input id="banKinh" placeholder="Nhập bán kính hình tròn" type="number"><br>
+<p><b id="chuVi"></b></p>
+<p><b id="dienTich"></b></p>
+<button onclick="tinhToan()">Tính</button>
+
+<script>
+  function tinhToan() {
+    let a = parseFloat(document.getElementById("banKinh").value);
+    let c = 2 * a * 3.14;
+    let s = a * a * 3.14;
+    document.getElementById("chuVi").innerHTML = "Chu vi hình tròn là: " + c;
+    document.getElementById("dienTich").innerHTML = "Diện tích hình tròn là: " + s;
+  }
+</script>
+</body>
+</html>

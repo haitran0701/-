@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+<h3>Chuyển đổi nhiệt độ</h3>
+<input id="c" placeholder="Nhập độ C" type="number"><br>
+<p><b id="f"></b></p>
+<button onclick="chuyenDoi()">Chuyển đổi nhiệt độ</button>
+
+<script>
+    function chuyenDoi() {
+        let a = parseFloat(document.getElementById("c").value);
+        let b = a * 9 / 5 + 32
+        document.getElementById("f").innerHTML = "Độ F là: " + b;
+    }
+</script>
+</body>
+</html>

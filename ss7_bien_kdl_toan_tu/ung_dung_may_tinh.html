@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ứng dụng Máy tính</title>
+</head>
+<body>
+<h3>Caculator</h3>
+<input id="a" placeholder="Nhập số thứ nhất" type="number">
+<input id="b" placeholder="Nhập số thứ hai" type="number"><br>
+<button onclick="cong()">Cộng(+)</button>
+<button onclick="tru()">Trừ(-)</button>
+<button onclick="nhan()">Nhân(X)</button>
+<button onclick="chia()">Chia(/)</button><br>
+<b id="ketQua"></b>
+
+<script>
+  function cong() {
+    let a = parseFloat(document.getElementById("a").value);
+    let b = parseFloat(document.getElementById("b").value);
+    let cong = a + b;
+    document.getElementById("ketQua").innerHTML = "Phép cộng là: " + cong;
+  }
+  function tru() {
+    let a = parseFloat(document.getElementById("a").value);
+    let b = parseFloat(document.getElementById("b").value);
+    let tru = a - b;
+    document.getElementById("ketQua").innerHTML = "Phép trừ là: " + tru;
+  }
+  function nhan() {
+    let a = parseFloat(document.getElementById("a").value);
+    let b = parseFloat(document.getElementById("b").value);
+    let nhan = a * b;
+    document.getElementById("ketQua").innerHTML = "Phép nhân là: " + nhan;
+  }
+  function chia() {
+    let a = parseFloat(document.getElementById("a").value);
+    let b = parseFloat(document.getElementById("b").value);
+    let chia = a / b;
+    document.getElementById("ketQua").innerHTML = "Phép chia là: " + chia;
+  }
+
+</script>
+</body>
+</html>

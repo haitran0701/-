@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điểm trung bình</title>
+</head>
+<body>
+<h3>Tính tổng và điểm trung bình</h3>
+<input id="toan" placeholder="Nhập điểm Toán" type="number"><br>
+<input id="ly" placeholder="Nhập điểm Lý" type="number"><br>
+<input id="hoa" placeholder="Nhập điểm Hóa" type="number"><br>
+<p><b id="tong"></b></p>
+<p><b id="avg"></b></p>
+<button onclick="diem()">Tính</button>
+
+<script>
+    function diem() {
+        let a = parseFloat(document.getElementById("toan").value);
+        let b = parseFloat(document.getElementById("ly").value);
+        let c = parseFloat(document.getElementById("hoa").value);
+        let tong = a + b + c;
+        let avg = tong / 3;
+        document.getElementById("tong").innerHTML = "Tổng điểm là: " + tong;
+        document.getElementById("avg").innerHTML = "Điểm trung bình là: " + avg;
+    }
+</script>
+</body>
+</html>
