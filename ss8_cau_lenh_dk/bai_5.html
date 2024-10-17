@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+  // Tiêu chí:
+  // Điểm bài kiểm tra: Trọng số 20%
+  // Điểm thi giữa kỳ: Trọng số 30%
+  // Điểm thi cuối kỳ: Trọng số 50%
+  // Xếp loại:
+  // Giỏi: Điểm trung bình >= 8.5
+  // Khá: 7 <= Điểm trung bình < 8.5
+  // Trung bình: 5 <= Điểm trung bình < 7
+  // Yếu: Điểm trung bình < 5
+  let diemKiemTra = +prompt("Nhập điểm bài kiểm tra (0 - 10):");
+  let diemGiuaKy = +prompt("Nhập điểm thi giữa kỳ (0 - 10):");
+  let diemCuoiKy = +prompt("Nhập điểm thi cuối kỳ (0 - 10):");
+  let diemTrungBinh = (diemKiemTra * 0.2) + (diemGiuaKy * 0.3) + (diemCuoiKy * 0.5);
+
+  let xepLoai;
+  if (diemTrungBinh >= 8.5) {
+    xepLoai = "Giỏi";
+  } else if (diemTrungBinh >= 7) {
+    xepLoai = "Khá";
+  } else if (diemTrungBinh >= 5) {
+    xepLoai = "Trung bình";
+  } else {
+    xepLoai = "Yếu";
+  }
+
+  alert("Điểm trung bình là: " + diemTrungBinh + " - " + "Xếp loại: " + xepLoai);
+</script>
+</body>
+</html>

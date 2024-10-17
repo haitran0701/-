@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bài 7</title>
+</head>
+<body>
+<script>
+  // Số phút gọi trong 50 phút đầu tiên: 600 đồng/phút
+  // Số phút gọi từ phút 51 đến 200: 400 đồng/phút
+  // Số phút gọi từ phút 201 trở đi: 200 đồng/phút
+  let soPhut = +prompt("Nhập số phút gọi trong tháng: ");
+  let cuoc;
+  if (soPhut <= 50) {
+    cuoc = soPhut * 600;
+  } else if (soPhut <= 200) {
+    cuoc =  (50 * 600) + ((soPhut - 50) * 400);
+  } else {
+    cuoc = (50 * 600) + (150 * 400) + ((soPhut - 200) * 200);
+  }
+  alert("Số tiền cước tháng này là: " + cuoc + "đồng");
+</script>
+</body>
+</html>

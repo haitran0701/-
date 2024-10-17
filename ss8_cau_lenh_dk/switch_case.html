@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Switch-case</title>
+</head>
+<body>
+<h2>Kiểm tra số ngày trong tháng</h2>
+<input id="thang" type="number" placeholder="Nhập tháng">
+<b id="soNgay"></b><br>
+<button onclick="soNgay()">Tính số ngày</button>
+<script>
+  function soNgay() {
+    let month = parseFloat(document.getElementById("thang").value)
+    switch (month) {
+      case 1:
+      case 3:
+      case 5:
+      case 7:
+      case 8:
+      case 10:
+      case 12:
+        document.getElementById("soNgay").innerHTML="Tháng này có 31 ngày";
+        break;
+      case 2:
+        document.getElementById("soNgay").innerHTML="Tháng 2 có 28 ngày hoặc 29";
+        break
+      case 4:
+      case 6:
+      case 9:
+      case 11:
+        document.getElementById("soNgay").innerHTML="Tháng này có 30 ngày";
+        break;
+      default:
+        document.getElementById("soNgay").innerHTML="Đây không phải là tháng trong năm";
+    }
+  }
+
+</script>
+</body>
+</html>

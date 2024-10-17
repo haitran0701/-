@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bài 6</title>
+</head>
+<body>
+<script>
+  // Doanh số < 5 triệu: Hoa hồng 5%
+  // Doanh số từ 5 triệu đến dưới 10 triệu: Hoa hồng 10%
+  // Doanh số từ 10 triệu trở lên: Hoa hồng 15%
+  let doanhSo = +prompt("Nhập doanh số bán hàng (triệu đồng):");
+  let hoaHong;
+  if (doanhSo < 5) {
+    hoaHong = doanhSo * 0.05;
+  } else if (doanhSo < 10) {
+    hoaHong = doanhSo * 0.10;
+  } else {
+    hoaHong = doanhSo * 0.15;
+  }
+  alert("Hoa hồng nhận được là " + hoaHong + "triệu đồng");
+</script>
+</body>
+</html>
