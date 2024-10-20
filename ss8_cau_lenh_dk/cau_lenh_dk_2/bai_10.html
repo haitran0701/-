@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bài 10</title>
+</head>
+<body>
+<script>
+  // Từ 0 đến 50 kWh: 1.500 VNĐ/kWh
+  // Từ 51 đến 100 kWh: 2.000 VNĐ/kWh
+  // Từ 101kWh trở lên: 2.500 VNĐ/kWh
+  let soDien = +prompt("Nhập số điện tiêu thụ (kWh):");
+  let cost;
+  if (soDien <= 50) {
+    cost = soDien * 1500;
+  } else if (soDien <= 100) {
+    cost = (50 * 1500) + ((soDien - 50) * 2000);
+  } else {
+    cost = (50 * 1500) + (50 * 2000) + ((soDien - 100) * 2500);
+  }
+  alert("Tổng tiền điện phải trả là: " + cost + " VNĐ");
+</script>
+</body>
+</html>

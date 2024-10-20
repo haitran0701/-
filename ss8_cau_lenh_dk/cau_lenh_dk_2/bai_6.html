@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<script>
+    alert("Nhập a và b của phương trình bậc nhất ax+b=0");
+    let a = +prompt("Nhập a");
+    let b = +prompt("Nhập b");
+    let x;
+    if ( a != 0) {
+        x = -(b/a);
+        alert("Phương trình có nghiệm duy nhất x = -(b/a) = " + x );
+    } else {
+        if ( b != 0) {
+            alert("Phương trình vô nghiệm");
+        } else {
+            alert("Phương trình có vô số nghiệm");
+        }
+    }
+</script>
+</body>
+</html>

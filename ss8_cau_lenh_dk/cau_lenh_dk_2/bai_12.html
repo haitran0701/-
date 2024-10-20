@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 12</title>
+</head>
+<body>
+<script>
+  let tienBanDau = +prompt("Nhập số tiền ban đầu: ");
+  let soThang = +prompt("Nhập số tháng cho vay");
+  let laiSuat = +prompt("Nhập lãi suất hàng tháng(%)");
+  let laiKep;
+  if ( tienBanDau < 0 || laiSuat < 0 || soThang < 0 ) {
+    alert("Vui lòng nhập lại.");
+  } else if ( !Number.isInteger(soThang) ) {
+    alert("Vui lòng nhập số tháng hợp lệ");
+  } else {
+    laiKep = tienBanDau * Math.pow((1 + laiSuat/100),soThang);
+    alert("Số tiền cuối cùng phải trả là: " + laiKep);
+  }
+</script>
+</body>
+</html>

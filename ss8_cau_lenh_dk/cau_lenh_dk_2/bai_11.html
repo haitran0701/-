@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 11</title>
+</head>
+<body>
+<script>
+    // Các mức tính thuế:
+    // Thu nhập dưới 10 triệu: 5%
+    // Thu nhập từ 10 triệu đến 15 triệu: 10%
+    // Thu nhập trên 15 triệu: 15%
+
+    let thuNhap = +prompt("Nhập thu nhập hàng tháng (VND):");
+    let tienThue;
+
+    if (thuNhap < 10000000) {
+        tienThue = thuNhap * 0.05;
+    } else if (thuNhap <= 15000000 ) {
+        tienThue = thuNhap * 0.1;
+    } else {
+        tienThue = thuNhap * 0.15;
+    }
+
+    alert("Số tiền thuế phải trả là: " + tienThue + " VNĐ");
+</script>
+</body>
+</html>

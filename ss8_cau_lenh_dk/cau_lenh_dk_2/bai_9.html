@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+<script>
+  alert("Nhập 3 cạnh của 1 tam giác a,b,c");
+  let a =+prompt("Nhập cạnh a:");
+  let b =+prompt("Nhập cạnh b:");
+  let c =+prompt("Nhập cạnh c:");
+  let ketQua = a > 0 && b > 0 && c > 0 && (a + b > c) && (b + c > a) && (a + c > b) ? "a, b, c là các cạnh của một tam giác." : "a, b, c không phải là các cạnh của một tam giác.";
+  alert(ketQua)
+</script>
+</body>
+</html>

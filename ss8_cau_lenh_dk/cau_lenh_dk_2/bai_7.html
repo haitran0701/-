@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bài 7</title>
+</head>
+<body>
+<script>
+  alert("Nhập a, b và c của phương trình bậc hai ax² + bx + c = 0 ");
+  let a = +prompt("Nhập a");
+  let b = +prompt("Nhập b");
+  let c = +prompt("Nhập c");
+  let delTa = b * b - 4 * a * c;
+  if (a==0){
+    alert("Đây không phải là 1 phương trình bậc 2");
+  } else if ( delTa < 0 ) {
+    alert("Phương trình vô nghiệm");
+  } else if ( delTa == 0) {
+    alert("Phương trình có nghiệm kép x1 = x2 = " + -b/(2 *a)  );
+  } else {
+    let x1 = (-b + Math.sqrt(delTa)) / (2 * a);
+    let x2 = (-b - Math.sqrt(delTa)) / (2 * a);
+    alert("Phương trình có 2 nghiệm phân biệt x1 = " + x1 + " và x2 = " + x2 );
+  }
+</script>
+</body>
+</html>
