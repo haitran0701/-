@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bài 2</title>
+</head>
+<body>
+<script>
+  let temperature;
+  do {
+    temperature = +prompt("Nhập nhiệt độ hiện tại:");
+    if (temperature > 100) {
+      alert("Nhiệt độ quá cao, vui lòng giảm nhiệt độ!");
+    } else if (temperature < 20) {
+      alert("Nhiệt độ quá thấp, vui lòng tăng nhiệt độ!");
+    }
+  } while (temperature > 100 || temperature < 20);
+  alert("Nhiệt độ ổn định.");
+</script>
+</body>
+</html>

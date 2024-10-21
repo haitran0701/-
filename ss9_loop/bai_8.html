@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bài 8</title>
+</head>
+<body>
+<button onclick="game()">Chơi</button>
+<script>
+  function game() {
+    alert("Nhập khoảng a-b bạn muốn đoán");
+    let a = +prompt("Nhập a");
+    let b = +prompt("Nhập b");
+    if ( a > b) {
+      alert("Vui lòng nhập khoảng hợp lệ");
+      return;
+    }
+    const random= Math.floor(Math.random() * (b - a + 1)) + a;
+    let doan = 0;
+    const max = 3;
+    while ( doan < max ) {
+      let c = +prompt("Nhập giá trị của bạn đoán: ");
+      if ( c < a || c > b  ) {
+        alert("Đây là 1 số không hợp lệ. Vui lòng nhập lại số của bạn.");
+        continue;
+      }
+      if (c < random) {
+        alert("Số của bạn đang bé hơn.");
+      } else if (c === random) {
+        alert("Đây là số chính xác! Chúc mừng bạn.");
+        return;
+      } else {
+        alert("Số của bạn đang lớn hơn.");
+      }
+      doan++;
+    } alert("Bạn đã hết lượt đoán. Số chính xác là: " + random);
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bài 5</title>
+</head>
+<body>
+<script>
+  let n = 20;
+  let fibo = [0,1];
+  let sum = 0;
+  for ( let i = 2; i < n; i++) {
+    fibo[i] = fibo[i - 2] + fibo[i - 1];
+  }
+  for ( let i = 0; i < n; i++ ) {
+    sum += fibo[i];
+  } alert(sum);
+</script>
+</body>
+</html>
