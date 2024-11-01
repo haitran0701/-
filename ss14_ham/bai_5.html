@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tìm kiếm chòm sao</title>
+</head>
+<body>
+<script>
+  let ngoiSao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+
+  const chomSao = ["Ursa Minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+  function timSao(starName) {
+    let index = ngoiSao.indexOf(starName);
+    if (index !== -1) {
+      return chomSao[index];
+    } else {
+      return "Không tìm thấy ngôi sao này.";
+    }
+  }
+  let starName = prompt("Nhập tên ngôi sao:");
+  if (starName) {
+    let result = timSao(starName);
+    document.write("Chòm sao chứa ngôi sao " + starName + " là: " + result);
+  } else {
+    document.write("Bạn chưa nhập tên ngôi sao.");
+  }
+</script>
+</body>
+</html>
