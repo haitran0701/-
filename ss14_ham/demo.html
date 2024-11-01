@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--Bài 3: Tạo hàm nhận vào hai tham số.
+Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai, hiển thị hộp thoại thông báo cho người dùng.
+Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số.-->
+<body>
+<input type="number" id="number1" placeholder="Number 1">
+<input type="number" id="number2" placeholder="Number 2">
+<input type="button" value="Kiểm tra" onclick="processData()">
+</body>
+<script>
+    function subProcess(number1, number2) {
+        if (number1 > number2) {
+            alert("Số thứ 1 lớn hơn số thứ 2")
+        } else if (number1 <= number2) {
+            alert("Tổng là: " + (number1 + number2))
+        }
+    }
+
+    function processData() {
+        let number1 = parseFloat(document.getElementById("number1").value);
+        let number2 = parseFloat(document.getElementById("number2").value);
+        subProcess(number1, number2);
+    }
+</script>
+</html>
