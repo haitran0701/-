@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemTraKyTuSo(kyTu) {
+        return kyTu.length == 1 && kyTu >= '0' && kyTu <= '9';
+    }
+    let kyTu = prompt("Nhập một ký tự:");
+    if (kiemTraKyTuSo(kyTu)) {
+        alert("Ký tự bạn nhập là ký tự số.");
+    } else {
+        alert("Ký tự bạn nhập không phải là ký tự số.");
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chu vi và Diện tích Hình tròn</title>
+</head>
+<body>
+<script>
+  let a = +prompt("Nhập bán kính của hình tròn: ");
+  function tinh(r) {
+    let chuVi = 2 * Math.PI * r;
+    let dienTich = Math.PI * r * r;
+    return { chuVi, dienTich };
+  }
+  alert("Chu vi của hình tròn là: " + tinh(a).chuVi.toFixed(2) + "\nDiện tích của hình tròn là: " + tinh(a).dienTich.toFixed(2));
+</script>
+</body>
+</html>

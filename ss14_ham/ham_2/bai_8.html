@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đảo ngược mảng</title>
+</head>
+<body>
+<script>
+  function daoNguoc(array) {
+    array.reverse();
+    console.log(`Mảng sau khi đảo ngược là: ${array}`);
+  }
+  let n = +prompt("Độ dài của mảng là:");
+  let array1 = Array(n);
+  for (let i = 0; i < array1.length; i++) {
+    array1[i] = +prompt(`Nhập số thứ ${i + 1} `);
+  }
+  daoNguoc(array1);
+</script>
+</body>
+</html>

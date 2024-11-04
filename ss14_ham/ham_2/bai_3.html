@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tính Giai Thừa</title>
+</head>
+<body>
+<script>
+  let a = +prompt("Nhập 1 số nguyên bất kỳ: ");
+
+  if (a < 0 || !Number.isInteger(a) ) {
+    alert("Số bạn vừa nhập không hợp lệ.");
+  } else {
+    function giaiThua(n) {
+      if (n == 0 || n == 1) {
+        return 1;
+      } else {
+        return n * giaiThua(n - 1);
+      }
+    }
+    alert("Giai thừa của " + a + " là: " + giaiThua(a));
+  }
+</script>
+</body>
+</html>
