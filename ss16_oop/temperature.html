@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+<p>Độ C: 25</p>
+<p>Độ F: <span id="fahrenheit"></span></p>
+<p>Độ K: <span id="kelvin"></span></p>
+<script>
+  class Temperature {
+    constructor(celsius) {
+      if (celsius < -273) {
+        throw new Error("Nhiệt độ không thể thấp hơn -273°C");
+      }
+      this.celsius = celsius;
+    }
+    toFahrenheit() {
+      return (this.celsius * 9/5) + 32;
+    }
+    toKelvin() {
+      return this.celsius + 273.15;
+    }
+  }
+  const temp = new Temperature(25);
+  document.getElementById("fahrenheit").textContent = temp.toFahrenheit() + " °F";
+  document.getElementById("kelvin").textContent = temp.toKelvin() + " K";
+</script>
+</body>
+</html>

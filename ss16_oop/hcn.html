@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thay đổi chiều dài và chiều rộng hình chữ nhật</title>
+    <style>
+        canvas {
+        }
+    </style>
+</head>
+<body>
+<canvas id="hinhChuNhat" width="400" height="400"></canvas>
+<h2>Nhập chiều dài và chiều rộng mới:</h2>
+<form id="formInput">
+    <label for="chieuDai">Chiều dài:</label>
+    <input type="number" id="chieuDai" min="1" required />
+    <label for="chieuRong">Chiều rộng:</label>
+    <input type="number" id="chieuRong" min="1" required />
+    <button type="submit">Cập nhật</button>
+</form>
+<h2>Thông tin hình chữ nhật</h2>
+<p id="dienTich"></p>
+<p id="chuVi"></p>
+
+<script>
+    class Rectangle {
+        constructor(chieuDai, chieuRong) {
+            this.chieuDai = chieuDai;
+            this.chieuRong = chieuRong;
+        }
+        getDienTich() {
+            return this.chieuDai * this.chieuRong;
+        }
+        getChuVi() {
+            return 2 * (this.chieuDai + this.chieuRong);
+        }
+        draw(canvasId) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext("2d");
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.beginPath();
+            ctx.rect(50, 50, this.chieuDai, this.chieuRong);
+            ctx.fillStyle = "lightgreen";
+            ctx.fill();
+        }
+    }
+    let hinhChuNhat = new Rectangle(150, 100);
+    hinhChuNhat.draw("hinhChuNhat");
+    document.getElementById("dienTich").textContent = `Diện tích: ${hinhChuNhat.getDienTich()} đơn vị vuông.`;
+    document.getElementById("chuVi").textContent = `Chu vi: ${hinhChuNhat.getChuVi()} đơn vị.`;
+    document.getElementById("formInput").addEventListener("submit", function(event) {
+        event.preventDefault(); // Ngừng hành động mặc định của form
+        const newChieuDai = parseInt(document.getElementById("chieuDai").value);
+        const newChieuRong = parseInt(document.getElementById("chieuRong").value);
+        hinhChuNhat.chieuDai = newChieuDai;
+        hinhChuNhat.chieuRong = newChieuRong;
+        hinhChuNhat.draw("hinhChuNhat");
+        document.getElementById("dienTich").textContent = `Diện tích: ${hinhChuNhat.getDienTich()} đơn vị vuông.`;
+        document.getElementById("chuVi").textContent = `Chu vi: ${hinhChuNhat.getChuVi()} đơn vị.`;
+    });
+</script>
+</body>
+</html>
