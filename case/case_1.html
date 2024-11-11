@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kiểm tra</title>
+</head>
+<body>
+<script>
+  let n = +prompt("Nhập độ dài của mảng (n < 20):");
+  if (isNaN(n) || n >= 20 || n <= 0) {
+    alert("Độ dài mảng chưa hợp lệ.");
+  } else {
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+      let element = +prompt(`Nhập phần tử thứ ${i + 1}:`);
+      if (isNaN(element)) {
+        alert("Bạn phải nhập một số.");
+      } else {
+        arr.push(element);
+      }
+    }
+    let isArithmetic = true;
+    if (arr.length > 1) {
+      let difference = arr[1] - arr[0];
+      for (let i = 1; i < arr.length - 1; i++) {
+        if (arr[i + 1] - arr[i] !== difference) {
+          isArithmetic = false;
+          break;
+        }
+      }
+    }
+    if (isArithmetic) {
+      alert("Mảng là dãy số đều.");
+    } else {
+      alert("Mảng không phải là dãy số đều.");
+    }
+  }
+</script>
+</body>
+</html>
