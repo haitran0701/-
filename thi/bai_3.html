@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+    <style>
+        body {
+            margin: 20px;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid black;
+            text-align: left;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+<h1>Quản lý công nhân</h1>
+<table>
+    <thead>
+    <tr>
+        <th>STT</th>
+        <th>Họ và tên</th>
+        <th>Ngày sinh</th>
+        <th>Địa chỉ</th>
+        <th>Lương</th>
+        <th>Chức vụ</th>
+    </tr>
+    </thead>
+    <tbody id="workerTable"></tbody>
+</table>
+<script>
+    let workers = [
+        { name: "Trương Tấn A", dob: "11-11-1997", address: "Quảng Nam", salary: 2000, position: "ABC" },
+        { name: "Trương Tấn C", dob: "11-11-1999", address: "Huế", salary: 2000, position: "ABC" },
+        { name: "Trương Tấn B", dob: "11-11-1998", address: "Đà Nẵng", salary: 2000, position: "ABC" }
+    ];
+    function sortWorkersByName(workers) {
+        return workers.sort((a, b) => a.name.localeCompare(b.name));
+    }
+    function displayWorkers(workers) {
+        let tableBody = document.getElementById("workerTable");
+        tableBody.innerHTML = "";
+        workers.forEach((worker, index) => {
+            let row = `
+                    <tr>
+                        <td>${index + 1}</td>
+                        <td>${worker.name}</td>
+                        <td>${worker.dob}</td>
+                        <td>${worker.address}</td>
+                        <td>${worker.salary}</td>
+                        <td>${worker.position}</td>
+                    </tr>
+                `;
+            tableBody.innerHTML += row;
+        });
+    }
+    displayWorkers(sortWorkersByName(workers));
+</script>
+</body>
+</html>

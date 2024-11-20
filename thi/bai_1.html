@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    function inputArray() {
+        let n = +prompt("Nhập số lượng phần tử của mảng (n <= 50):");
+        while (n <= 0 || n > 50 || isNaN(n)) {
+            n = +prompt("Số phần tử không hợp lệ. Vui lòng nhập lại (n <= 50):");
+        }
+        let arr = [];
+        for (let i = 0; i < n; i++) {
+            arr[i] = +prompt(`Nhập phần tử thứ ${i + 1}:`);
+        }
+        return arr;
+    }
+    function calculateAverage(arr) {
+        let sum = 0;
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 3 === 0) {
+                sum += arr[i];
+                count++;
+            }
+        }
+        if (count === 0) {
+            alert("Không có số nào trong mảng chia hết cho 3.");
+            return;
+        }
+        return sum / count;
+    }
+    let arr = inputArray();
+    alert("Mảng vừa nhập: " + arr );
+    alert("Trung bình cộng các số chia hết cho 3: " + calculateAverage(arr));
+</script>
+</body>
+</html>
